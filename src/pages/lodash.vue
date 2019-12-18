@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div class="lodash">
+    <p>console.log(chunk(['a', 'b', 'c', 'd'], 2))</p>
+    <p><span class="tip">=></span>[['a', 'b'], ['c', 'd']]</p>
+  </div>
 </template>
 
 <script>
@@ -14,3 +17,12 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  .lodash {
+    padding: 30px;
+    .tip {
+      padding-right: 15px;
+    }
+  }
+</style>

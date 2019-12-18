@@ -16,7 +16,7 @@
   export default {
     data () {
       return {
-        pageList: ['Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash']
+        pageList: ['Lodash', 'Element', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash']
       }
     },
     methods: {
@@ -38,6 +38,9 @@
       .item {
         width: 93px;
         line-height: 93px;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
         border-bottom: 1px #929292 solid;
         &.left-right {
           border-left: 1px #929292 solid;

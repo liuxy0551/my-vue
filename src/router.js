@@ -17,7 +17,8 @@ const routes = [
       { path: '', name: 'Camera', meta: { title: 'Camera' }, component: () => import('../src/pages/camera') }
     ]
   },
-  { path: '/lodash', name: 'Lodash', meta: { title: 'Lodash' }, component: () => import('../src/pages/lodash') }
+  { path: '/lodash', name: 'Lodash', meta: { title: 'Lodash' }, component: () => import('../src/pages/lodash') },
+  { path: '/element', name: 'Element', meta: { title: 'Element' }, component: () => import('../src/pages/element') },
 ]
 
 const router = new VueRouter({

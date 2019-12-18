@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="camera">
     <div class="title">H5 页面调用摄像头与拾音器</div>
 
     <div class="btn-box">
@@ -87,17 +87,20 @@
 </script>
 
 <style lang="scss" scoped>
-  .title {
-    padding-top: 30px;
-  }
-  .btn-box {
-    padding: 30px 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  video {
-    width: 350px;
-    height: 350px;
-    background: #000;
+  .camera {
+    text-align: center;
+    .title {
+      padding-top: 30px;
+    }
+    .btn-box {
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    video {
+      width: 350px;
+      height: 350px;
+      background: #000;
+    }
   }
 </style>
