@@ -23,9 +23,6 @@
       goPage (routerName) {
         this.$router.push({ name: routerName })
       }
-    },
-    mounted () {
-
     }
   }
 </script>
