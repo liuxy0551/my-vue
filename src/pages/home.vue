@@ -4,9 +4,9 @@
       <div class="item"
            :class="{ 'left-right' : index % 4 === 1, 'three' : index % 2 === 1 }"
            v-for="(item, index) in pageList"
-           @click="goPage(item)"
+           @click="goPage(item.name)"
       >
-        {{ item }}
+        {{ item.title }}
       </div>
     </div>
   </div>
@@ -16,7 +16,13 @@
   export default {
     data () {
       return {
-        pageList: ['Lodash', 'Element', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash', 'Lodash']
+        pageList: [
+          { title: 'Lodash', name: 'Lodash' }, { title: 'Element', name: 'Element' }, { title: '钝角三角形', name: 'Triangle' },
+          { title: '矩形', name: 'Rectangle' }, { title: '气泡对话框', name: 'Bubble' },
+          { title: 'Element', name: 'Element' }, { title: '钝角三角形', name: 'Triangle' },
+          { title: 'Lodash', name: 'Lodash' }, { title: 'Element', name: 'Element' }, { title: '钝角三角形', name: 'Triangle' },
+          { title: 'Lodash', name: 'Lodash' }, { title: 'Element', name: 'Element' }
+        ]
       }
     },
     methods: {
