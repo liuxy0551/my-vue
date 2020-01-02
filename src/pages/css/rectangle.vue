@@ -9,7 +9,7 @@
 
 <style lang="scss" scoped>
   .rectangle-box {
-    height: 100vh;
+    height: 70vh;
     background-color: #d0d0d0;
     .rectangle-part {
       position: absolute;

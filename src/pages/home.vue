@@ -3,10 +3,10 @@
     <div class="box">
       <div class="item"
            :class="{ 'left-right' : index % 4 === 1, 'three' : index % 2 === 1 }"
-           v-for="(item, index) in pageList"
+           v-for="(item, index) in routerList"
            @click="goPage(item.name)"
       >
-        {{ item.title }}
+        {{ item.meta.title }}
       </div>
     </div>
   </div>
@@ -16,19 +16,29 @@
   export default {
     data () {
       return {
-        pageList: [
-          { title: 'Lodash', name: 'Lodash' }, { title: 'Element', name: 'Element' }, { title: '钝角三角形', name: 'Triangle' },
-          { title: '矩形', name: 'Rectangle' }, { title: '气泡对话框', name: 'Bubble' },
-          { title: 'Element', name: 'Element' }, { title: '钝角三角形', name: 'Triangle' },
-          { title: 'Lodash', name: 'Lodash' }, { title: 'Element', name: 'Element' }, { title: '钝角三角形', name: 'Triangle' },
-          { title: 'Lodash', name: 'Lodash' }, { title: 'Element', name: 'Element' }
-        ]
+        routerList: []
       }
     },
     methods: {
       goPage (routerName) {
         this.$router.push({ name: routerName })
       }
+    },
+    mounted () {
+      let routerList = []
+      for (let i of this.$router.options.routes) {
+        if (i.meta) {
+          if (i.children && i.children.length) {
+            for (let j of i.children) {
+              routerList.push(j)
+            }
+          } else {
+            routerList.push(i)
+          }
+        }
+      }
+
+      this.routerList = routerList
     }
   }
 </script>

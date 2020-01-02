@@ -14,7 +14,7 @@
 
 <style lang="scss" scoped>
   .bubble-box {
-    height: 100vh;
+    height: 70vh;
     background-color: #d0d0d0;
     /*矩形*/
     .rectangle-part {

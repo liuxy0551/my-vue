@@ -1,7 +1,7 @@
 <template>
   <div class="triangle-box">
     <div class="triangle-part">
-      <!--三角形-->
+      <!--钝角三角形-->
       <div class="triangle"></div>
     </div>
   </div>
@@ -9,7 +9,7 @@
 
 <style lang="scss" scoped>
   .triangle-box {
-    height: 100vh;
+    height: 70vh;
     background-color: #d0d0d0;
     .triangle-part {
       position: absolute;
