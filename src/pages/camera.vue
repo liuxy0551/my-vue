@@ -17,7 +17,7 @@
   import { Button } from 'vant'
 
   export default {
-    data() {
+    data () {
       return {
         camera: null,
         video: null,
