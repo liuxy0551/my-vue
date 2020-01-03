@@ -24,7 +24,8 @@ const routes = [
   { path: '/css/rectangle', name: 'CSSRectangle', meta: { title: '矩形' }, component: () => import('./pages/css/rectangle') },
   { path: '/css/bubble', name: 'CSSBubble', meta: { title: '气泡对话框' }, component: () => import('./pages/css/bubble') },
 
-  { path: '/bubble', name: 'Bubble', meta: { title: '冒泡排序' }, component: () => import('./pages/bubble') }
+  { path: '/bubble', name: 'Bubble', meta: { title: '冒泡排序' }, component: () => import('./pages/bubble') },
+  { path: '/amount', name: 'Amount', meta: { title: '金额展示' }, component: () => import('./pages/amount') }
 ]
 
 const router = new VueRouter({

@@ -2,7 +2,7 @@
   <div class="home">
     <div class="box">
       <div class="item"
-           :class="{ 'left-right' : index % 4 === 1, 'three' : index % 2 === 1 }"
+           :class="{ 'two' : index % 4 === 1, 'three' : index % 4 === 2 }"
            v-for="(item, index) in routerList"
            @click="goPage(item.name)"
       >
@@ -44,6 +44,7 @@
 </script>
 
 <style lang="scss" scoped>
+  $borderColor: #929292;
   .home {
     .box {
       display: flex;
@@ -51,16 +52,15 @@
       .item {
         width: 93px;
         line-height: 93px;
-        font-size: 18px;
         font-weight: 600;
         text-align: center;
-        border-bottom: 1px #929292 solid;
-        &.left-right {
-          border-left: 1px #929292 solid;
-          border-right: 1px #929292 solid;
+        border-bottom: 1px $borderColor solid;
+        &.two {
+          border-left: 1px $borderColor solid;
+          border-right: 1px $borderColor solid;
         }
         &.three {
-          border-left: 1px #929292 solid;
+          border-right: 1px $borderColor solid;
         }
       }
     }

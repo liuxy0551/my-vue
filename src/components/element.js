@@ -9,6 +9,7 @@ export default {
       // Vue.use(elementUI)    // 也可以使用 Vue.use()
     ])
 
-    Vue.prototype.$ELEMENT = { size: 'small' };
+    // 全局设置 size
+    // Vue.prototype.$ELEMENT = { size: 'small' };
   }
 }

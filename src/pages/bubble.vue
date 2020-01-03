@@ -5,7 +5,7 @@
       <li>
         <div class="row">
           <div class="label">随机数组：</div>
-          <el-button type="primary" @click="getRandomList(1, 50, 6)">生成随机数组</el-button>
+          <el-button type="primary" size="small" @click="getRandomList(1, 50, 6)">生成随机数组</el-button>
         </div>
         <div class="value">{{ list }}</div>
       </li>
@@ -80,7 +80,6 @@
         margin-bottom: 15px;
       }
       li {
-        font-size: 18px;
         padding-bottom: 15px;
         .row {
           display: flex;
