@@ -1,14 +1,10 @@
 <template>
   <div class="home">
-    <div class="box">
-      <div class="item"
-           :class="{ 'two' : index % 4 === 1, 'three' : index % 4 === 2 }"
-           v-for="(item, index) in routerList"
-           @click="goPage(item.name)"
-      >
+    <ul>
+      <li :class="{ 'two' : index % 3 === 1 }" v-for="(item, index) in routerList" :key="index" @click="goPage(item.name)">
         {{ item.meta.title }}
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -46,20 +42,19 @@
 <style lang="scss" scoped>
   $borderColor: #929292;
   .home {
-    .box {
+    ul {
       display: flex;
       flex-wrap: wrap;
-      .item {
-        width: 93px;
+      li {
+        width: 124px;
         line-height: 93px;
+        font-size: 14px;
         font-weight: 600;
         text-align: center;
         border-bottom: 1px $borderColor solid;
         &.two {
+          width: 125px;
           border-left: 1px $borderColor solid;
-          border-right: 1px $borderColor solid;
-        }
-        &.three {
           border-right: 1px $borderColor solid;
         }
       }
