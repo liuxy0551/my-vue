@@ -23,11 +23,14 @@
     mounted () {
       if (this.isPC()) {
         let html = document.querySelector('html')
-        html.style.fontSize = '24px'
-        html.style.width = '375px'
+        let body = document.querySelector('body')
+        html.style.fontSize = '37.5px'
         html.style.height = '667px'
-        html.style.margin = '0 auto'
+        html.style.background = '#212121'
         html.style.transform = 'translate(0, 10%)'
+        html.childNodes[0].style.transform = 'translate(0, 0)'
+        body.style.width = '375px'
+        body.style.margin = '0 auto'
       }
     }
   }
