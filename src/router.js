@@ -8,13 +8,13 @@ const routes = [
   {
     path: '', component: Layout,
     children: [
-      { path: '', name: 'Home', component: () => import('../src/pages/home') }
+      { path: '', name: 'Camera', meta: { title: 'Camera' }, component: () => import('../src/pages/camera') }
     ]
   },
   {
-    path: '/camera', component: Layout,
+    path: '/home', component: Layout,
     children: [
-      { path: '', name: 'Camera', meta: { title: 'Camera' }, component: () => import('../src/pages/camera') }
+      { path: '', name: 'Home', component: () => import('../src/pages/home') }
     ]
   },
   { path: '/lodash', name: 'Lodash', meta: { title: 'Lodash' }, component: () => import('../src/pages/lodash') },
