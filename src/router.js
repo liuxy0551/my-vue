@@ -28,7 +28,7 @@ const routes = [
   { path: '/amount', name: 'Amount', meta: { title: '金额展示' }, component: () => import('./pages/amount') },
   { path: '/array', name: 'Array', meta: { title: '数组元素交换' }, component: () => import('./pages/array') },
 
-  { path: '/v-console', name: 'vConsole', meta: { title: 'vConsole' }, component: () => import('./pages/vConsole') },
+  { path: '/v-console', name: 'vConsole', meta: { title: 'vConsole', keepAlive: true }, component: () => import('./pages/vConsole') },
   { path: '/signed-board', name: 'SignedBoard', meta: { title: '手签板' }, component: () => import('./pages/signedBoard') }
 ]
 
