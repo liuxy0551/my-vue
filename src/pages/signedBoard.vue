@@ -42,14 +42,7 @@
       // 重签
       signAgain () {
         this.$refs['signedBoardRef'].clear()
-      },
-      // 判断屏幕是否旋转
-      orientationChange () {
-        console.log(1)
       }
-    },
-    mounted () {
-      // console.log(window.orientation)
     }
   }
 </script>

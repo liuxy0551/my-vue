@@ -9,7 +9,7 @@
 
 <style lang="scss" scoped>
   .triangle-box {
-    height: 70vh;
+    height: 100%;
     background-color: #d0d0d0;
     .triangle-part {
       position: absolute;
