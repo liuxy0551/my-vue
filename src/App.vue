@@ -24,6 +24,7 @@
       if (this.isPC()) {
         let html = document.querySelector('html')
         let body = document.querySelector('body')
+        let app = document.querySelector('#app')
         html.style.fontSize = '37.5px'
         html.style.height = '667px'
         html.style.background = '#212121'
@@ -31,13 +32,25 @@
         html.childNodes[0].style.transform = 'translate(0, 0)'
         body.style.width = '375px'
         body.style.margin = '0 auto'
+        app.style.transform = 'translate(0, 0)'
       }
     }
   }
 </script>
 
 <style>
+  html {
+    height: 100%;
+    box-sizing: border-box;
+    background: #212121;
+  }
+  body {
+    height: 100%;
+    background: #fafafa;
+  }
   #app {
+    height: 100%;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
@@ -51,14 +64,5 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  html {
-    box-sizing: border-box;
-    background: #212121;
-    height: 100%;
-  }
-  body {
-    background: #fafafa;
-    height: 100%;
   }
 </style>

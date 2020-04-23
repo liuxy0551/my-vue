@@ -1,11 +1,12 @@
 <template>
-  <div class="home">
+  <sy-scroll class="home">
     <ul>
-      <li :class="{ 'two' : index % 3 === 1 }" v-for="(item, index) in routerList" :key="index" @click="goPage(item.name)">
-        {{ item.meta.title }}
+      <li v-for="(item, index) in routerList" :key="index" @click="goPage(item.name)">
+        <div>{{ item.meta.title }}</div>
+        <sy-icon icon="arrow-right" size="20" color="#C5C5C5" />
       </li>
     </ul>
-  </div>
+  </sy-scroll>
 </template>
 
 <script>
@@ -41,22 +42,18 @@
 
 <style lang="scss" scoped>
   $borderColor: #929292;
+
   .home {
     ul {
-      display: flex;
-      flex-wrap: wrap;
+      padding: 10px 20px 70px;
       li {
-        width: 124px;
-        line-height: 93px;
         font-size: 14px;
         font-weight: 600;
-        text-align: center;
-        border-bottom: 1px $borderColor solid;
-        &.two {
-          width: 125px;
-          border-left: 1px $borderColor solid;
-          border-right: 1px $borderColor solid;
-        }
+        padding: 15px 10px;
+        border-bottom: 1px #DBE0E6 solid;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
     }
   }

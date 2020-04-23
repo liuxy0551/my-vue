@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <router-view/>
 
     <van-tabbar class="home-tab" route>
@@ -16,10 +16,13 @@
 </script>
 
 <style lang="scss">
-  .home-tab {
-    width: 375px !important;
-    margin: 0 auto !important;
-    left: 0;
-    right: 0;
+  .page {
+    height: 100%;
+    .home-tab {
+      width: 375px !important;
+      margin: 0 auto !important;
+      left: 0;
+      right: 0;
+    }
   }
 </style>

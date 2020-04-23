@@ -26,6 +26,13 @@ Vue.use(vant)
 import element from './components/element'
 Vue.use(element)
 
+// 按需引入 syedu 组件
+import 'syedu/packages/assets/stylesheets/application.scss'
+import syedu from './components/syedu'
+Vue.use(syedu)
+
+
+import utils from './utils'
 
 new Vue({
   router,

@@ -5,7 +5,7 @@
       <li>
         <div class="row">
           <div class="label">随机数组：</div>
-          <el-button type="primary" size="small" @click="getRandomList(1, 50, 6)">生成随机数组</el-button>
+          <van-button type="primary" size="small" @click="getRandomList(1, 50, 6)">生成随机数组</van-button>
         </div>
         <div class="value">{{ list }}</div>
       </li>
@@ -86,7 +86,6 @@
           align-items: center;
           justify-content: space-between;
           padding-bottom: 5px;
-
         }
       }
     }
