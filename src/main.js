@@ -4,6 +4,8 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+import '@/assets/stylesheets/scss/application.scss'
+import 'amfe-flexible'
 
 // 完整引入 Vant
 // import Vant from 'vant'
