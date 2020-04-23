@@ -48,7 +48,6 @@
       padding: 10px 20px 70px;
       li {
         font-size: 14px;
-        font-weight: 600;
         padding: 15px 10px;
         border-bottom: 1px #DBE0E6 solid;
         display: flex;

@@ -26,7 +26,10 @@ const routes = [
 
   { path: '/bubble', name: 'Bubble', meta: { title: '冒泡排序' }, component: () => import('./pages/bubble') },
   { path: '/amount', name: 'Amount', meta: { title: '金额展示' }, component: () => import('./pages/amount') },
-  { path: '/array', name: 'Array', meta: { title: '数组元素交换' }, component: () => import('./pages/array') }
+  { path: '/array', name: 'Array', meta: { title: '数组元素交换' }, component: () => import('./pages/array') },
+
+  { path: '/v-console', name: 'vConsole', meta: { title: 'vConsole' }, component: () => import('./pages/vConsole') },
+  { path: '/signed-board', name: 'SignedBoard', meta: { title: '手签板' }, component: () => import('./pages/signedBoard') }
 ]
 
 const router = new VueRouter({
