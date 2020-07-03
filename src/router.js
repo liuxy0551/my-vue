@@ -29,7 +29,9 @@ const routes = [
   { path: '/array', name: 'Array', meta: { title: '数组元素交换' }, component: () => import('./pages/array') },
 
   { path: '/v-console', name: 'vConsole', meta: { title: 'vConsole', keepAlive: true }, component: () => import('./pages/vConsole') },
-  { path: '/signed-board', name: 'SignedBoard', meta: { title: '手签板' }, component: () => import('./pages/signedBoard') }
+  { path: '/signed-board', name: 'SignedBoard', meta: { title: '手签板' }, component: () => import('./pages/signedBoard') },
+
+  { path: '/photo', name: 'Photo', meta: { title: '滚动动画' }, component: () => import('./pages/photo') }
 ]
 
 const router = new VueRouter({

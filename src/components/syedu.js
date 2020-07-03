@@ -2,6 +2,7 @@
 import icon from 'syedu/packages/icon'
 import scroll from 'syedu/packages/scroll'
 import signedBoard from 'syedu/packages/signedBoard'
+import VueExt from 'syedu/packages/vue-ext'
 
 const syedu = [scroll, icon, signedBoard]
 
@@ -10,5 +11,6 @@ export default {
     syedu.forEach(component => [
       Vue.use(component)
     ])
+    Vue.use(VueExt)
   }
 }
