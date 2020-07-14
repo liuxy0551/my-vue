@@ -2,7 +2,7 @@
 
 [syedu ui](http://ui.syedu.tech)
 
-[服务器链接](http://my-vue.liuxianyu.cn/)
+[http://my-vue.liuxianyu.cn/](http://my-vue.liuxianyu.cn/)
 
 [github 仓库](https://github.com/liuxy0551/my-vue)
 
