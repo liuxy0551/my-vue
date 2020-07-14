@@ -11,6 +11,20 @@ module.exports = {
     config.resolve.alias.set('vue$', 'vue/dist/vue.common.js') // key,value自行定义，比如.set('@@', resolve('src/components'))
       .set('@', resolve('src'))
 
+      config
+        .module
+        .rule("images")
+        .test(/\.(jpe?g|png|gif)$/i)
+        .use("url-loader")
+        .loader("url-loader")
+        .options({
+          limit: 10000,
+          publicPath: process.env.NODE_ENV === 'production' ? 'http://media.liuxianyu.cn/images' : '',
+          outputPath: 'img',
+          name: '[name].[ext]'
+        })
+        .end()
+
     if (process.env.use_analyzer) {
       config
         .plugin('webpack-bundle-analyzer')
