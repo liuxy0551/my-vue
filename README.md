@@ -2,6 +2,8 @@
 
 [syedu ui](http://ui.syedu.tech)
 
+[http://my-vue.liuxianyu.cn/](http://my-vue.liuxianyu.cn/)
+
 [github 仓库](https://github.com/liuxy0551/my-vue)
 
 [gitee 在线展示](https://liuxy0551.gitee.io/my-vue)
