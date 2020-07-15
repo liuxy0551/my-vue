@@ -7,6 +7,7 @@ module.exports = {
   devServer: {
     disableHostCheck: true,//解决127.0.0.1指向其他域名时出现"Invalid Host header"问题
   },
+  outputDir: 'docs',
   chainWebpack: config => {
     config.resolve.alias.set('vue$', 'vue/dist/vue.common.js') // key,value自行定义，比如.set('@@', resolve('src/components'))
       .set('@', resolve('src'))
