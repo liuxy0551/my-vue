@@ -33,6 +33,7 @@ Vue.use(syedu)
 
 
 import utils from './utils'
+Vue.use(utils)
 
 new Vue({
   router,

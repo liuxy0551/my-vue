@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <keep-alive>
-      <router-view v-if="$route.meta.keepAlive" :key="$route.name"></router-view>
+      <router-view v-if="$route.meta.keepAlive" :key="$route.name" />
     </keep-alive>
 
-    <router-view v-if="!$route.meta.keepAlive"></router-view>
+    <router-view v-if="!$route.meta.keepAlive" />
   </div>
 </template>
 
 <script>
+  import mixUmeng from '@/mixins/mixUmeng'
+
   export default {
     name: 'app',
+    mixins: [mixUmeng],
     methods: {
       isPC () {
         let Agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod']
