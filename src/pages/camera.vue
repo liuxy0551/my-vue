@@ -5,13 +5,13 @@
     <div class="btn-box">
       <!--ready - 默认状态，play - 播放状态，pause - 暂停状态-->
       <van-button plain type="info" :disabled="cameraStatus !== 'ready'" @click="startCamera"
-                  v-log="['H5 页面调用摄像头与拾音器', '开始']">开 始</van-button>
+                  v-log="['摄像头与拾音器', '开始']">开 始</van-button>
       <van-button plain type="info" :disabled="cameraStatus !== 'play'" @click="pauseCamera"
-                  v-log="['H5 页面调用摄像头与拾音器', '暂停']">暂 停</van-button>
+                  v-log="['摄像头与拾音器', '暂停']">暂 停</van-button>
       <van-button plain type="info" :disabled="cameraStatus !== 'pause'" @click="continueCamera"
-                  v-log="['H5 页面调用摄像头与拾音器', '继续']">继 续</van-button>
+                  v-log="['摄像头与拾音器', '继续']">继 续</van-button>
       <van-button plain type="info" :disabled="cameraStatus !== 'play'" @click="stopCamera"
-                  v-log="['H5 页面调用摄像头与拾音器', '停止']">停 止</van-button>
+                  v-log="['摄像头与拾音器', '停止']">停 止</van-button>
     </div>
 
     <video />

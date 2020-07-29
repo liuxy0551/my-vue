@@ -1,17 +1,20 @@
 <template>
   <div class="amount">
     <!--金额-->
-    <van-field
-            label="金额数字："
-            type="number"
-            v-model="amount"
-            placeholder="请输入金额，最长14位"
-            maxlength="14"
-            clearable
-            autofocus
-            :error-message="errMsg"
-    >
-    </van-field>
+    <div class="input-btn">
+      <van-field
+              label="金额数字："
+              type="number"
+              v-model="amount"
+              placeholder="请输入最长12位数字"
+              maxlength="12"
+              clearable
+              autofocus
+              :error-message="errMsg"
+      >
+      </van-field>
+      <van-button type="primary" v-log="['金额数字', amount]" @click="done">确认</van-button>
+    </div>
 
     <ul>
       <li>
@@ -38,31 +41,30 @@
         errMsg: '',
       }
     },
-    watch: {
-      amount (nv) {
+    methods: {
+      // 确认
+      done () {
         let reg = /((^[1-9]\d*)|^0)(\.\d{0,2}){0,1}$/
 
-        if (reg.test(nv)) {
+        if (reg.test(this.amount)) {
           this.errMsg = ''
 
-          let left = nv.split('.')[0]
+          let left = this.amount.split('.')[0]
           let right = ''
-          if (nv.indexOf('.') > -1) {
-            right = '.' + nv.split('.')[1]
+          if (this.amount.indexOf('.') > -1) {
+            right = '.' + this.amount.split('.')[1]
           }
 
           // 计算有几个逗号
           let num = Math.ceil((left.length - 3) / 3)
 
 
-          this.func1(nv, left, right, num)
-          this.func2(nv, left, right, num)
+          this.func1(this.amount, left, right, num)
+          this.func2(this.amount, left, right, num)
         } else {
           this.errMsg = '金额格式不正确'
         }
-      }
-    },
-    methods: {
+      },
       // 拼接
       func1 (amount, left, right, num) {
         if (left.length > 3) {
@@ -99,6 +101,19 @@
 <style lang="scss" scoped>
   .amount {
     padding: 30px 20px;
+
+    .input-btn {
+      display: flex;
+      align-items: center;
+      .van-field {
+        width: 260px;
+        margin-right: 14px;
+      }
+      .van-button {
+        height: 34px;
+        white-space: nowrap;
+      }
+    }
 
     ul {
       font-size: 14px;

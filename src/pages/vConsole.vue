@@ -2,8 +2,8 @@
   <div class="v-console">
     <div class="v-console-cell">
       <div>vConsole</div>
-      <van-button type="primary" plain @click="show" v-if="vConsole">关闭</van-button>
-      <van-button type="primary" @click="show" v-else>打开</van-button>
+      <van-button type="primary" plain v-log="['vConsole', '关闭']" @click="show" v-if="vConsole">关闭</van-button>
+      <van-button type="primary" v-log="['vConsole', '打开']" @click="show" v-else>打开</van-button>
     </div>
   </div>
 </template>

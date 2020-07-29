@@ -2,8 +2,8 @@
   <sy-scroll class="signed-board">
     <sy-signed-board :options="options" @changeMoveCount="changeMoveCount" ref="signedBoardRef">
       <div class="btn-box">
-        <van-button @click="uploadImage">上传签名</van-button>
-        <van-button @click="signAgain">重签</van-button>
+        <van-button v-log="['手签板', '确认签名']" @click="uploadImage">确认签名</van-button>
+        <van-button v-log="['手签板', '重签']" @click="signAgain">重签</van-button>
       </div>
     </sy-signed-board>
   </sy-scroll>
@@ -36,7 +36,7 @@
           console.log(imgBase64)
           let myBlob = dataURLToBlob(imgBase64)
           console.log(myBlob)
-          this.$toast('上传成功')
+          this.$toast('成功')
         }
       },
       // 重签
