@@ -10,38 +10,11 @@
 
 <script>
   import mixUmeng from '@/mixins/mixUmeng'
+  import mixMobileOnPC from 'syedu/packages/mixins/mixMobileOnPC'
 
   export default {
     name: 'app',
-    mixins: [mixUmeng],
-    methods: {
-      isPC () {
-        let Agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod']
-        let flag = true
-        for (let i of Agents) {
-          if (navigator.userAgent.indexOf(i) > 0) {
-            flag = false
-            break
-          }
-        }
-        return flag
-      }
-    },
-    mounted () {
-      if (this.isPC()) {
-        let html = document.querySelector('html')
-        let body = document.querySelector('body')
-        let app = document.querySelector('#app')
-        html.style.fontSize = '37.5px'
-        html.style.height = '667px'
-        html.style.background = '#212121'
-        html.style.transform = 'translate(0, 10%)'
-        html.childNodes[0].style.transform = 'translate(0, 0)'
-        body.style.width = '375px'
-        body.style.margin = '0 auto'
-        app.style.transform = 'translate(0, 0)'
-      }
-    }
+    mixins: [mixUmeng, mixMobileOnPC]
   }
 </script>
 
