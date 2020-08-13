@@ -30,6 +30,14 @@ Vue.use(syedu)
 import utils from './utils'
 Vue.use(utils)
 
+import Cloud from '@zezeping/cloud-vue'
+Vue.use(Cloud, {
+  // name: 'Cloud', // default Cloud
+  mapComponents: {
+    'JsonView': 'JsonView.px.f5c2860ad.js'
+  }
+})
+
 new Vue({
   router,
   render: h => h(App)

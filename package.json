@@ -5,9 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "deploy": "deployvue build && deployvue deploy && deployvue clean",
     "analyzer": "use_analyzer=true npm run serve"
   },
   "dependencies": {
+    "@zezeping/cloud-vue": "^0.0.5",
     "amfe-flexible": "^2.2.1",
     "core-js": "^3.4.3",
     "element-ui": "^2.13.0",

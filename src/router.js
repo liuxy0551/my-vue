@@ -32,7 +32,10 @@ const routes = [
   { path: '/signed-board', name: 'SignedBoard', meta: { title: '手签板' }, component: () => import('./pages/signedBoard') },
 
   // Vue 项目打包时自动把所有图片的本地路径改为 CDN 路径
-  { path: '/imgCDN', name: 'ImgCDN', meta: { title: 'img CDN' }, component: () => import('./pages/imgCDN') }
+  { path: '/imgCDN', name: 'ImgCDN', meta: { title: 'img CDN' }, component: () => import('./pages/imgCDN') },
+
+  // 云组件
+  { path: '/cloud-ui', name: 'CloudUI', meta: { title: 'Cloud UI' }, component: () => import('./pages/cloud-ui') }
 ]
 
 const router = new VueRouter({
