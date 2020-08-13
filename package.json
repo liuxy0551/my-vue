@@ -10,7 +10,6 @@
   "dependencies": {
     "amfe-flexible": "^2.2.1",
     "core-js": "^3.4.3",
-    "create-keyframe-animation": "^0.1.0",
     "element-ui": "^2.13.0",
     "lodash": "^4.17.15",
     "syedu": "^1.0.0",

@@ -1,3 +1,5 @@
+import 'syedu/packages/assets/stylesheets/application.scss'
+
 // 按需引入 syedu 组件
 import icon from 'syedu/packages/icon'
 import scroll from 'syedu/packages/scroll'

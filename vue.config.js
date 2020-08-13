@@ -12,6 +12,7 @@ module.exports = {
     config.resolve.alias.set('vue$', 'vue/dist/vue.common.js') // key,value自行定义，比如.set('@@', resolve('src/components'))
       .set('@', resolve('src'))
 
+      // 打包时自动把所有图片的本地路径改为 CDN 路径
       config
         .module
         .rule("images")
@@ -26,6 +27,7 @@ module.exports = {
         })
         .end()
 
+    // 优化插件
     if (process.env.use_analyzer) {
       config
         .plugin('webpack-bundle-analyzer')
