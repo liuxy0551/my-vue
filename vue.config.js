@@ -2,6 +2,7 @@ var path = require('path')
 function resolve (dir) {
   return path.join(__dirname, dir)
 }
+
 module.exports = {
   productionSourceMap: false, // 生产环境的 source map
   devServer: {
@@ -12,20 +13,20 @@ module.exports = {
     config.resolve.alias.set('vue$', 'vue/dist/vue.common.js') // key,value自行定义，比如.set('@@', resolve('src/components'))
       .set('@', resolve('src'))
 
-      // 打包时自动把所有图片的本地路径改为 CDN 路径
-      config
-        .module
-        .rule("images")
-        .test(/\.(jpe?g|png|gif)$/i)
-        .use("url-loader")
-        .loader("url-loader")
-        .options({
-          limit: 10000,
-          publicPath: process.env.NODE_ENV === 'production' ? 'http://media.liuxianyu.cn/images' : '',
-          outputPath: 'img',
-          name: '[name].[ext]'
-        })
-        .end()
+    // 打包时自动把所有图片的本地路径改为 CDN 路径
+    config
+      .module
+      .rule("images")
+      .test(/\.(jpe?g|png|gif)$/i)
+      .use("url-loader")
+      .loader("url-loader")
+      .options({
+        limit: 10000,
+        publicPath: process.env.NODE_ENV === 'production' ? 'http://media.liuxianyu.cn/images' : '',
+        outputPath: 'img',
+        name: '[name].[ext]'
+      })
+      .end()
 
     // 优化插件
     if (process.env.use_analyzer) {
