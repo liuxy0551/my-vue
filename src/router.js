@@ -27,6 +27,7 @@ const routes = [
   { path: '/bubble', name: 'Bubble', meta: { title: '冒泡排序' }, component: () => import(/* webpackChunkName: 'home' */ './pages/bubble') },
   { path: '/amount', name: 'Amount', meta: { title: '金额展示' }, component: () => import(/* webpackChunkName: 'home' */ './pages/amount') },
   { path: '/array', name: 'Array', meta: { title: '数组元素交换' }, component: () => import(/* webpackChunkName: 'home' */ './pages/array') },
+  { path: '/width-img', name: 'WidthImg', meta: { title: '宽图查看' }, component: () => import(/* webpackChunkName: 'home' */ './pages/widthImg') },
 
   { path: '/v-console', name: 'vConsole', meta: { title: 'vConsole', keepAlive: true }, component: () => import(/* webpackChunkName: 'home' */ './pages/vConsole') },
   { path: '/signed-board', name: 'SignedBoard', meta: { title: '手签板' }, component: () => import(/* webpackChunkName: 'home' */ './pages/signedBoard') },

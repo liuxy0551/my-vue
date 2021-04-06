@@ -5,7 +5,7 @@
 
 module.exports = {
   default: {
-    deployTo: '/mnt/projects/my-vue', // 部署到服务器的路径
+    deployTo: '/mnt/projects/front/my-vue', // 部署到服务器的路径
     keepReleases: 5, // 支持回退几次版本
     archive: {
       rootDir: 'docs', // 打包后的文件夹名，默认dist
