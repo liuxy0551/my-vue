@@ -1,5 +1,7 @@
 # 前端 Demo 展示、测试 H5 调用摄像头、Vue CLI 3 项目打包优化
 
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=liuxy0551&layout=compact)](https://github.com/liuxy0551/my-vue)
+
 [syedu ui](http://ui.syedu.tech)
 
 [http://my-vue.liuxianyu.cn/](http://my-vue.liuxianyu.cn/)
