@@ -1,6 +1,6 @@
 <template>
   <div class="camera">
-    <div class="title">H5 页面调用摄像头与拾音器1</div>
+    <div class="title">H5 页面调用摄像头与拾音器</div>
 
     <div class="btn-box">
       <!--ready - 默认状态，play - 播放状态，pause - 暂停状态-->
