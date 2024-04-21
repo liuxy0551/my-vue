@@ -60,7 +60,7 @@
       padding: 0 20px;
     }
 
-    /deep/ .text {
+    ::v-deep .text {
       line-height: 28px;
     }
     .avatar {
