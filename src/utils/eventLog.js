@@ -5,7 +5,9 @@ export default {
   install (Vue) {
     Vue.directive('log', {
       bind (el, binding) {
-        el.addEventListener('click', () => { window._czc.push(['_trackEvent', ...binding.value]) }, false)
+        el.addEventListener('click', () => {
+          // window._czc.push(['_trackEvent', ...binding.value])
+        }, false)
       },
       unbind (el) {
         el.removeEventListener('click', () => { console.log('remove') })
