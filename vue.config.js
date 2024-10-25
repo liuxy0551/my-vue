@@ -23,7 +23,7 @@ module.exports = {
       .loader("url-loader")
       .options({
         limit: 10000,
-        publicPath: process.env.NODE_ENV === 'production' ? 'http://media.liuxianyu.cn/images' : '',
+        publicPath: process.env.NODE_ENV === 'production' ? 'https://my-vue.liuxianyu.cn/img' : '',
         outputPath: 'img',
         name: '[name].[ext]'
       })
